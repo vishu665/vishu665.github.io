@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Запись</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="imgs/FaviconAutoService.png" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="sweetalert2.all.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+        <link rel="stylesheet" href="sweetalert2.min.css">
+        <script src="site.js"></script>
+        
+      </head>
+    <body>
+        <!--навигация-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="index.html">
+            <img src="imgs\—Pngtree—vector internet server icon_4224707.png" width="30" alt="Brand" >
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Главная <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Services.html">Услуги<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Record.html">Записаться<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+            
+          </div>
+        </nav>
+        <!--сама форма записи-->
+        <form class="form-record" name="form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>Запись</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Имя</label>
+                            <label class="redzvezda" for="exampleFormControlInput1">*</label>
+                            <input name="Name"  class="form-control" id="exampleFormControlInput1" type="text" placeholder="Пример: Иван">
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput2">Телефон</label>
+                            <label class="redzvezda" for="exampleFormControlInput2">*</label>
+                            <input type="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            required name="Number" class="form-control" id="exampleFormControlInput2" placeholder="Пример: 8-888-888-8888">
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput3">E-mail</label>
+                            <label class="redzvezda" for="exampleFormControlInput3">*</label>
+                            <input type="email"  name="Email" class="form-control" id="exampleFormControlInput3" placeholder="Пример: ivan@mail.ru">
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Услуга</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="Selected" >
+                              <option value="Сервер рабочей группы">Сервер рабочей группы</option>
+                              <option value="Контроллер домена">Контроллер домена</option>
+                              <option value="Шлюз во всемирную паутину">Шлюз во всемирную паутину</option>
+                              <option value="Веб-сервер">Веб-сервер</option>
+                              <option value="Проверка работы дисков">Проверка работы дисков</option>
+                              <option value="Рейд-массив">Рейд-массив</option>
+                              <option value="Проверка нагрузки">Проверка нагрузки</option>
+                              <option value="Cовместимость процессоров">Cовместимость процессоров</option>
+                              <option value="Продув сервера от пыли">Продув сервера от пыли</option>
+                              <option value="Обновление термопасты">Обновление термопасты</option>
+                              <option value="Проверка всех деталь">Проверка всех деталь</option>
+                              <option value="Проверка контактов">Проверка контактов</option>
+                              <option value="web-proxy сервера nginx">web-proxy сервера nginx</option>
+                              <option value="web-сервера apache">web-сервера apache</option>
+                              <option value="PHP">PHP</option>
+                              <option value="SMTP-сервера Exim">SMTP-сервера Exim</option>
+                              <option value="Установка и настройка ПО">Установка и настройка ПО</option>
+                              <option value="Обновление ПО">Обновление ПО</option>
+                              <option value="Лечение от вирусов">Лечение от вирусов</option>
+                              <option value="Оптимизация работы сервера">Оптимизация работы сервера</option>
+                              <option value="Конфигурирование серверов">Конфигурирование серверов</option>
+                              <option value="Подбор серверного оборудования">Подбор серверного оборудования</option>
+                              <option value="Закупка оборудования">Закупка оборудования</option>
+                              <option value="Замена оборудования">Замена оборудования</option>
+                            </select>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput4">Комментарий</label>
+                            <textarea type="textarea" name="Area" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label class="redzvezda" for="exampleFormControlInput4">*</label>
+                        <label for="exampleFormControlInput4">- поля обязательные к заполнению </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button type="submit" name="submit" class="btn btn-danger">Отправить</button>
+                        <br>
+                    </div>
+                </div> 
+            </div>
+        </form>
+        <div class="panel2">
+          <div style="width:100%;height:70px; background-color: #2b3238; ">
+              <div class="text">
+                  <a href="#" style="color: white">Политика конфиденциальности<span style="vertical-align: 25px"></span>
+                  </a>
+                  <a href="#" style="color: white">О нас<span style="vertical-align: 25px;"></span> </a>
+                  <a href="#" style="color: white">Контакты<span style="vertical-align: 25px;"></span></a>
+              </div>
+          </div>
+      </div>
+    </body>
+</html>
